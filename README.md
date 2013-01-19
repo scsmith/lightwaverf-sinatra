@@ -12,9 +12,9 @@ Install the required gems:
 
 ## Usage
 
-Start the Sinatra Server (Default port is 9292)
+Start the Sinatra Server (Default port with foreman is 5000)
 
-    $ bundle exec rackup
+    $ bundle exec foreman start
 
 ### Controlling Devices
 
