@@ -35,6 +35,10 @@ Examples:
 
 Note: This should probably be using `POST` requests instead of `GET` requests but it's easier to create `GET` requests by just navigating with a browser for the purposes of demonstration. If you're going to use this for anything but messing about I'd recommend replacing the method.
 
+## RaspberryPi
+
+There's also a [branch](https://github.com/scsmith/lightwaverf-sinatra/tree/pi) with some scripts to deploy this onto the RaspberryPi.
+
 ## Contributing
 
 1. Fork it
