@@ -7,4 +7,5 @@ gem 'foreman-export-initscript'
 
 group :development do
   gem 'rerun'
+  gem 'mina', :git => 'git://github.com/nadarei/mina.git'
 end

@@ -35,6 +35,34 @@ Examples:
 
 Note: This should probably be using `POST` requests instead of `GET` requests but it's easier to create `GET` requests by just navigating with a browser for the purposes of demonstration. If you're going to use this for anything but messing about I'd recommend replacing the method.
 
+## Installation and Usage on the RaspberryPi
+
+### Installing Debian on the SD Card
+
+NOTE: You must find the disk you need to use first! This will install to `/dev/disk3` and **wipe all existing content**.
+
+    df -h
+    sudo diskutil unmount /dev/disk3s1
+    sudo dd bs=1m if=~/Downloads/2012-12-16-wheezy-raspbian.img of=/dev/rdisk3
+
+### Setup SSH
+
+The RaspberryPi will boot to a setup screen. Ensure that you enable SSH at this point. You may also wish to expand the filesystem at this point.
+
+### Deploying using Mina
+
+Included is a mina script that will SSH to the RaspberryPi and perform the setup and run the app at boot.
+
+Make sure that bundler is installed locally and run:
+
+    $ bundle exec mina setup
+
+Once this completes you will then need to deploy from the git repo:
+
+    $ bundle exec mina deploy
+
+This will use foreman to generate a boot script for the debian machine. You can configure a bunch of deployment steps in `config/deploy.rb`
+
 ## Contributing
 
 1. Fork it
